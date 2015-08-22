@@ -1,7 +1,11 @@
 # MarketMonitor
 An ionic production of MarketMonitor
 
-To set up the project:
+##Requires
+* [Node.js](http://nodejs.org/)
+* [Ionic](http://ionicframework.com/getting-started/)
+
+##Dev Installation
 ```
 npm install
 bower install
