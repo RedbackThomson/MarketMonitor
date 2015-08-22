@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'marketmonitor.services' is found in services.js
 // 'marketmonitor.controllers' is found in controllers.js
-angular.module('marketmonitor', ['ionic', 'marketmonitor.controllers', 'marketmonitor.services', 'ngCordova'])
+angular.module('marketmonitor', ['ionic', 'marketmonitor.controllers', 'marketmonitor.services'])
 
-.run(function($ionicPlatform, $cordovaLocalNotification) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -23,20 +23,7 @@ angular.module('marketmonitor', ['ionic', 'marketmonitor.controllers', 'marketmo
 
     if(typeof device !== 'undefined' && device.platform === "iOS") {
         window.plugin.notification.local.promptForPermission();
-    }
-
-    var alarmTime = new Date();
-    alarmTime.setSeconds(alarmTime.getSeconds() + 20);
-    $cordovaLocalNotification.add({
-        id: "1234",
-        date: alarmTime,
-        message: "This is a message",
-        title: "This is a title",
-        autoCancel: true,
-        sound: null
-    }).then(function () {
-        console.log("The notification has been set");
-    });    
+    }  
   });
 })
 
