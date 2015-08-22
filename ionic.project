@@ -1,0 +1,9 @@
+{
+  "name": "marketmonitor",
+  "app_id": "de877fca",
+  "gulpStartupTasks": [
+    "sass",
+    "json",
+    "watch"
+  ]
+}

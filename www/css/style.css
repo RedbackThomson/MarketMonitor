@@ -1,0 +1,20 @@
+.flag-icon {
+	height: 64px !important;
+	width: 64px !important;
+	top: 10px !important;
+	left: 20px !important;
+}
+.short-item {
+	padding-top: 18px;
+	padding-bottom: 0px;
+	min-height: 84px;
+}
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+.no-margin-top {
+	margin-top: 0;
+}
+.float-right {
+	float: right;
+}

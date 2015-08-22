@@ -1,0 +1,18 @@
+{
+	"name": "Philippines",
+	"abbreviation": "PHL",
+	"stock": "PSEI.PS",
+	"open": "0000-00-00 01:00:00",
+	"close": "0000-00-00 07:03:15",
+	"holidays": [
+		"2015-06-12",
+		"2015-08-31",
+		"2015-11-30",
+		"2015-12-25",
+		"2015-12-30"
+	],
+	"timezone": "Asia/Manila",
+	"lunch_start": "0000-00-00 04:00:00",
+	"lunch_stop": "0000-00-00 05:30:00",
+	"flag_name": "Philippines"
+}

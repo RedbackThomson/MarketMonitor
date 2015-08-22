@@ -1,0 +1,19 @@
+{
+	"name": "Taiwan",
+	"abbreviation": "TWN",
+	"stock": "^TWII",
+	"open": "0000-00-00 01:00:00",
+	"close": "0000-00-00 05:30:00",
+	"holidays": [
+		"2015-06-19",
+		"2015-06-20",
+		"2015-09-27",
+		"2015-09-28",
+		"2015-10-09",
+		"2015-10-10"
+	],
+	"timezone": "Asia/Taipei",
+	"lunch_start": null,
+	"lunch_stop": null,
+	"flag_name": "Taiwan"
+}

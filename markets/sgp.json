@@ -1,0 +1,19 @@
+{
+	"name": "Singapore",
+	"abbreviation": "SGP",
+	"stock": "^STI",
+	"open": "0000-00-00 01:00:00",
+	"close": "0000-00-00 09:00:00",
+	"holidays": [
+		"2015-06-01",
+		"2015-07-17",
+		"2015-08-09",
+		"2015-09-24",
+		"2015-11-10",
+		"2015-12-25"
+	],
+	"timezone": "Asia/Singapore",
+	"lunch_start": null,
+	"lunch_stop": null,
+	"flag_name": "Singapore"
+}
