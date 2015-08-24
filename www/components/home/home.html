@@ -4,10 +4,10 @@
   </ion-nav-buttons>
 
 	<ion-content>
-		<h2 class="no-margin-bottom text-center">{{date | date:'hh:mm:ss a'}}</h2>
+		<h2 class="padding-top no-margin-bottom text-center">{{date | date:'hh:mm:ss a'}}</h2>
 		<h3 class="no-margin-top text-center">{{date | date:'EEEE, d MMMM, yyyy'}}</h3>
 		<ion-list>
-			<ion-item collection-repeat="market in markets | orderBy:'-localMoment.hours()'" class="short-item item-thumbnail-left">
+			<ion-item collection-repeat="market in markets | filter:marketEnabled | orderBy:'-localMoment.hours()'" class="short-item item-thumbnail-left">
 				<img class="flag-icon" ng-src="img/country-flags/{{market.flag_name}}.png">
 				<h2 class="float-right">{{market.localMoment.format('H:mm')}}</h2>
 				<h2>{{market.name}}</h2>

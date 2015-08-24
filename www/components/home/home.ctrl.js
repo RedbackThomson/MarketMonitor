@@ -1,13 +1,20 @@
 angular.module('marketmonitor')
 
-  .controller('HomeCtrl', ['$scope', '$interval', 'Markets', 'moment',
-    function($scope, $interval, Markets, moment) {
+  .controller('HomeCtrl', ['$scope', '$interval', 'Markets', 'moment', 'Notification', '$localstorage',
+    function($scope, $interval, Markets, moment, Notification, $localstorage) {
+    var enabledMarkets = [];
 
     var init = function() {
       $scope.date = new Date();
       $scope.markets = Markets.all();
+      enabledMarkets = $localstorage.getObject('selectedMarkets', []);
       updateStates();
+      Notification.add();
     };
+
+    $scope.marketEnabled = function(market) {
+      return enabledMarkets.indexOf(market.abbreviation) !== -1;
+    }
 
     var updateStates = function() {
       var now = moment();
@@ -15,7 +22,6 @@ angular.module('marketmonitor')
       angular.forEach($scope.markets, function(value) {
         value.localMoment = now.tz(value.timezone).clone();
         value.state = Markets.getState(utc, value);
-        console.log(value.name);
       });
     };
 

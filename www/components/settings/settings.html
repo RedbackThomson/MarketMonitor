@@ -1,7 +1,15 @@
 <ion-view view-title="Settings">
   <ion-content>
+  	<h4 class="padding-left">Market Opening/Closing Warning</h4>
+  	<div class="item range range-positive">
+	    <i class="icon ion-ios-clock-outline"></i>
+	    <input type="range" name="volume" min="0" max="100" ng-model="marketDelay" on-release="delayChange(marketDelay)">
+	    <i class="icon ion-ios-clock"></i>
+	    <p style="width: 60px; text-align: right;"><span ng-bind="marketDelay">15</span> mins</p>
+	  </div>
+  	<h4 class="padding-left">Markets</h4>
     <ion-list>
-      <ion-toggle>Enable Friends</ion-toggle>
-    </ion-list>
+    	<ion-toggle collection-repeat="market in markets | orderBy:'name'" toggle-class="toggle-calm" ng-model="marketToggle" ng-checked="marketEnabled(market)" ng-click="toggleMarket(market, marketToggle)">{{market.name}}</ion-toggle>
+  	</ion-list>
   </ion-content>
 </ion-view>

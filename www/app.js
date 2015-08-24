@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'marketmonitor.services' is found in services.js
 // 'marketmonitor.controllers' is found in controllers.js
-angular.module('marketmonitor', ['ionic'])
+angular.module('marketmonitor', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,7 +23,7 @@ angular.module('marketmonitor', ['ionic'])
 
     if(typeof device !== 'undefined' && device.platform === "iOS") {
         window.plugin.notification.local.promptForPermission();
-    }  
+    }
   });
 })
 
@@ -39,7 +39,8 @@ angular.module('marketmonitor', ['ionic'])
     .state('home', {
       url: '/home',
       templateUrl: 'components/home/home.html',
-      controller: 'HomeCtrl'
+      controller: 'HomeCtrl',
+      cache: false
     })
     .state('settings', {
       url: '/settings',
